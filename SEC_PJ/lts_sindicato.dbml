@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SEC_PJ" Class="lts_sindicatoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=181.199.155.11;Initial Catalog=SEC_PJ;User ID=sec" SettingsObjectName="SEC_PJ.Properties.Settings" SettingsPropertyName="SEC_PJConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.impresion" Member="impresion">
+    <Type Name="impresion">
+      <Column Name="sexo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="clase" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numdoc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="apenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="prof" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="domicilio" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="tipodoc" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="analfabeto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="circuito" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="seccion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fecafi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FechaAfil" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="apellido" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="nro_calle" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="partido" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cuartel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ciudad" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="string2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dia" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="mes" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="año" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="estadocivil" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="lugar" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DM" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="reg" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="piso" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="dpto" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Padron_Capital" Member="Padron_Capital">
+    <Type Name="Padron_Capital">
+      <Column Name="sexo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="clase" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numdoc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="apenom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="prof" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="domicilio" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="tipodoc" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="analfabeto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="circuito" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="seccion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fecafi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FechaAfil" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="fotos_.maeemp" Member="maeemp">
+    <Type Name="maeemp">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MAEEMP_CUIT" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MAEEMP_NOMFAN" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MAEEMP_RAZSOC" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MAEEMP_CALLE" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MAEEMP_NRO" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="MAEEMP_CODPROV" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="MAEEMP_CODLOC" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="MAEEMP_CODPOS" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="MAEEMP_TEL" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MAEEMP_EMAIL" Type="System.String" DbType="Char(40)" CanBeNull="true" />
+      <Column Name="MAEEMP_CREDMAX" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="MAEEMP_CONDCRED" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="MAEEMP_ACTUALIZA" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MAEEMP_ESTUDIO_CONTACTO" Type="System.String" DbType="Char(40)" CanBeNull="true" />
+      <Column Name="MAEEMP_ESTUDIO_TEL" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MAEEMP_ESTUDIO_EMAIL" Type="System.String" DbType="Char(40)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="fotos_.maesoc" Member="maesoc">
+    <Type Name="maesoc">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MAESOC_CUIL" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_APELLIDO" Type="System.String" DbType="Char(30) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_NOMBRE" Type="System.String" DbType="Char(30) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_TEL" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_TELCEL" Type="System.String" DbType="Char(30) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_FECHANAC" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_CARGAFLIA" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_JUBIL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_PREDOC" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MAESOC_FECHADOC" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_CODCAT" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_CODACT" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_TIPODOC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_NRODOC" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_GRUPOSANG" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_SEXO" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_ESTCIV" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_CODPROV" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_CODLOC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_CODPOS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_BARRIO" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="MAESOC_NACIONALIDAD" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_CALLE" Type="System.String" DbType="Char(30) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_NROCALLE" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_PISO" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_DTO" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_CODOSM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_CODCON" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MAESOC_NROAFIL" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_EMAIL" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_EMAILLAB" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_NROCARNET" Type="System.String" DbType="Char(8) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_IMPEST1" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_IMPEST2" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_IMPEST3" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_IMPEST4" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_IMPEST5" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_IMPEST6" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_DEBAUT_CBU" Type="System.String" DbType="Char(22) NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_DEBAUT_MONTO" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_ACTUALIZA" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MAESOC_DTOFARMACIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MAESOC_FECHAALTA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_FECHAMOD" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="MAESOC_USUMOD" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="fotos_.soccen" Member="soccen">
+    <Type Name="soccen">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SOCCEN_CUIL" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SOCCEN_ESTADO" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SOCCEN_CODIVA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SOCCEN_FEING" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SOCCEN_FEBAJA" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SOCCEN_NRORESCOMDIR" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SOCCEN_CREDMAX" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="SOCCEN_CONDCRED" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SOCCEN_SOCDIR" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SOCCEN_DESPEDIDO" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SOCCEN_ACTUALIZA" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="fotos_.socemp" Member="socemp">
+    <Type Name="socemp">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SOCEMP_CUIL" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SOCEMP_CUITE" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SOCEMP_ESTADO" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SOCEMP_FECHAING" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SOCEMP_FECHABAJA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SOCEMP_CAUSABAJA" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SOCEMP_NROLEG" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="SOCEMP_SOCIOCENTRO" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SOCEMP_ULT_EMPRESA" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
