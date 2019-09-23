@@ -48,7 +48,7 @@ namespace SEC_PJ
     #endregion
 		
 		public lts_sindicatoDataContext() : 
-				base(global::SEC_PJ.Properties.Settings.Default.SEC_PJConnectionString2, mappingSource)
+				base(global::SEC_PJ.Properties.Settings.Default.SEC_PJConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -122,6 +122,22 @@ namespace SEC_PJ
 			get
 			{
 				return this.GetTable<socemp>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Capital> Capital
+		{
+			get
+			{
+				return this.GetTable<Capital>();
+			}
+		}
+		
+		public System.Data.Linq.Table<pettazi> pettazi
+		{
+			get
+			{
+				return this.GetTable<pettazi>();
 			}
 		}
 	}
@@ -3273,6 +3289,474 @@ namespace SEC_PJ
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Capital")]
+	public partial class Capital
+	{
+		
+		private System.Nullable<double> _DOC;
+		
+		private System.Nullable<double> _CLASE;
+		
+		private string _APELLIDO;
+		
+		private string _NOMBRE;
+		
+		private string _DOMICILIO;
+		
+		private string _TIPODOC;
+		
+		private System.Nullable<double> _SECCION;
+		
+		private string _CIRCUITO;
+		
+		private System.Nullable<double> _MESA;
+		
+		private string _SEXO;
+		
+		private System.Nullable<double> _ORDEN;
+		
+		public Capital()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DOC", DbType="Float")]
+		public System.Nullable<double> DOC
+		{
+			get
+			{
+				return this._DOC;
+			}
+			set
+			{
+				if ((this._DOC != value))
+				{
+					this._DOC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CLASE", DbType="Float")]
+		public System.Nullable<double> CLASE
+		{
+			get
+			{
+				return this._CLASE;
+			}
+			set
+			{
+				if ((this._CLASE != value))
+				{
+					this._CLASE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDO", DbType="NVarChar(255)")]
+		public string APELLIDO
+		{
+			get
+			{
+				return this._APELLIDO;
+			}
+			set
+			{
+				if ((this._APELLIDO != value))
+				{
+					this._APELLIDO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="NVarChar(255)")]
+		public string NOMBRE
+		{
+			get
+			{
+				return this._NOMBRE;
+			}
+			set
+			{
+				if ((this._NOMBRE != value))
+				{
+					this._NOMBRE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DOMICILIO", DbType="NVarChar(255)")]
+		public string DOMICILIO
+		{
+			get
+			{
+				return this._DOMICILIO;
+			}
+			set
+			{
+				if ((this._DOMICILIO != value))
+				{
+					this._DOMICILIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIPODOC", DbType="NVarChar(255)")]
+		public string TIPODOC
+		{
+			get
+			{
+				return this._TIPODOC;
+			}
+			set
+			{
+				if ((this._TIPODOC != value))
+				{
+					this._TIPODOC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SECCION", DbType="Float")]
+		public System.Nullable<double> SECCION
+		{
+			get
+			{
+				return this._SECCION;
+			}
+			set
+			{
+				if ((this._SECCION != value))
+				{
+					this._SECCION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CIRCUITO", DbType="NVarChar(255)")]
+		public string CIRCUITO
+		{
+			get
+			{
+				return this._CIRCUITO;
+			}
+			set
+			{
+				if ((this._CIRCUITO != value))
+				{
+					this._CIRCUITO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MESA", DbType="Float")]
+		public System.Nullable<double> MESA
+		{
+			get
+			{
+				return this._MESA;
+			}
+			set
+			{
+				if ((this._MESA != value))
+				{
+					this._MESA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SEXO", DbType="NVarChar(255)")]
+		public string SEXO
+		{
+			get
+			{
+				return this._SEXO;
+			}
+			set
+			{
+				if ((this._SEXO != value))
+				{
+					this._SEXO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ORDEN", DbType="Float")]
+		public System.Nullable<double> ORDEN
+		{
+			get
+			{
+				return this._ORDEN;
+			}
+			set
+			{
+				if ((this._ORDEN != value))
+				{
+					this._ORDEN = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.pettazi")]
+	public partial class pettazi
+	{
+		
+		private string _Apellido_y_Nombre__asc_;
+		
+		private string _Legajo;
+		
+		private string _Fecha;
+		
+		private string _Turno;
+		
+		private string _Entrada;
+		
+		private string _Salida;
+		
+		private string _Marca_Entrada;
+		
+		private string _Marca_Salida;
+		
+		private string _Horas_Asignadas;
+		
+		private string _Horas_Normales;
+		
+		private System.Nullable<System.DateTime> _HorasExtras;
+		
+		private string _Total_Horas;
+		
+		private string _Fichadora;
+		
+		private string _Ubicación;
+		
+		public pettazi()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Apellido y Nombre (asc)]", Storage="_Apellido_y_Nombre__asc_", DbType="NVarChar(255)")]
+		public string Apellido_y_Nombre__asc_
+		{
+			get
+			{
+				return this._Apellido_y_Nombre__asc_;
+			}
+			set
+			{
+				if ((this._Apellido_y_Nombre__asc_ != value))
+				{
+					this._Apellido_y_Nombre__asc_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Legajo", DbType="NVarChar(255)")]
+		public string Legajo
+		{
+			get
+			{
+				return this._Legajo;
+			}
+			set
+			{
+				if ((this._Legajo != value))
+				{
+					this._Legajo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha", DbType="NVarChar(255)")]
+		public string Fecha
+		{
+			get
+			{
+				return this._Fecha;
+			}
+			set
+			{
+				if ((this._Fecha != value))
+				{
+					this._Fecha = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Turno", DbType="NVarChar(255)")]
+		public string Turno
+		{
+			get
+			{
+				return this._Turno;
+			}
+			set
+			{
+				if ((this._Turno != value))
+				{
+					this._Turno = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entrada", DbType="NVarChar(255)")]
+		public string Entrada
+		{
+			get
+			{
+				return this._Entrada;
+			}
+			set
+			{
+				if ((this._Entrada != value))
+				{
+					this._Entrada = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Salida", DbType="NVarChar(255)")]
+		public string Salida
+		{
+			get
+			{
+				return this._Salida;
+			}
+			set
+			{
+				if ((this._Salida != value))
+				{
+					this._Salida = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Marca Entrada]", Storage="_Marca_Entrada", DbType="NVarChar(255)")]
+		public string Marca_Entrada
+		{
+			get
+			{
+				return this._Marca_Entrada;
+			}
+			set
+			{
+				if ((this._Marca_Entrada != value))
+				{
+					this._Marca_Entrada = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Marca Salida]", Storage="_Marca_Salida", DbType="NVarChar(255)")]
+		public string Marca_Salida
+		{
+			get
+			{
+				return this._Marca_Salida;
+			}
+			set
+			{
+				if ((this._Marca_Salida != value))
+				{
+					this._Marca_Salida = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Horas Asignadas]", Storage="_Horas_Asignadas", DbType="NVarChar(255)")]
+		public string Horas_Asignadas
+		{
+			get
+			{
+				return this._Horas_Asignadas;
+			}
+			set
+			{
+				if ((this._Horas_Asignadas != value))
+				{
+					this._Horas_Asignadas = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Horas Normales]", Storage="_Horas_Normales", DbType="NVarChar(255)")]
+		public string Horas_Normales
+		{
+			get
+			{
+				return this._Horas_Normales;
+			}
+			set
+			{
+				if ((this._Horas_Normales != value))
+				{
+					this._Horas_Normales = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HorasExtras", DbType="DateTime")]
+		public System.Nullable<System.DateTime> HorasExtras
+		{
+			get
+			{
+				return this._HorasExtras;
+			}
+			set
+			{
+				if ((this._HorasExtras != value))
+				{
+					this._HorasExtras = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Total Horas]", Storage="_Total_Horas", DbType="NVarChar(255)")]
+		public string Total_Horas
+		{
+			get
+			{
+				return this._Total_Horas;
+			}
+			set
+			{
+				if ((this._Total_Horas != value))
+				{
+					this._Total_Horas = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fichadora", DbType="NVarChar(255)")]
+		public string Fichadora
+		{
+			get
+			{
+				return this._Fichadora;
+			}
+			set
+			{
+				if ((this._Fichadora != value))
+				{
+					this._Fichadora = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ubicación", DbType="NVarChar(255)")]
+		public string Ubicación
+		{
+			get
+			{
+				return this._Ubicación;
+			}
+			set
+			{
+				if ((this._Ubicación != value))
+				{
+					this._Ubicación = value;
+				}
 			}
 		}
 	}

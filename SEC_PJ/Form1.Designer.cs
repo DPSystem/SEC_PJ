@@ -102,6 +102,7 @@
             this.lbl_cantidad_afiliados = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel26 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lbl_cantidad_NO_afil = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_cerrar_busqueda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_cerrar)).BeginInit();
@@ -899,12 +900,22 @@
             this.lbl_cantidad_NO_afil.TabIndex = 257;
             this.lbl_cantidad_NO_afil.Text = "0";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(39, 586);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 258;
+            this.label1.Text = "label1";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(639, 625);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_cantidad_NO_afil);
             this.Controls.Add(this.bunifuCustomLabel26);
             this.Controls.Add(this.lbl_cantidad_afiliados);
@@ -1032,6 +1043,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_nac;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn clase;
+        private System.Windows.Forms.Label label1;
     }
 }
 

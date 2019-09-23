@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SEC_PJ" Class="lts_sindicatoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=181.199.155.11;Initial Catalog=SEC_PJ;User ID=sec" SettingsObjectName="SEC_PJ.Properties.Settings" SettingsPropertyName="SEC_PJConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DIEGO-LENOVO;Initial Catalog=SEC_PJ;Integrated Security=True" SettingsObjectName="SEC_PJ.Properties.Settings" SettingsPropertyName="SEC_PJConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.impresion" Member="impresion">
     <Type Name="impresion">
       <Column Name="sexo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
@@ -148,6 +148,39 @@
       <Column Name="SOCEMP_NROLEG" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
       <Column Name="SOCEMP_SOCIOCENTRO" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
       <Column Name="SOCEMP_ULT_EMPRESA" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Capital" Member="Capital">
+    <Type Name="Capital">
+      <Column Name="DOC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CLASE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="APELLIDO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DOMICILIO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TIPODOC" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SECCION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CIRCUITO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MESA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SEXO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ORDEN" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pettazi" Member="pettazi">
+    <Type Name="pettazi">
+      <Column Name="[Apellido y Nombre (asc)]" Member="Apellido_y_Nombre__asc_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Legajo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Turno" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Entrada" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Salida" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Marca Entrada]" Member="Marca_Entrada" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Marca Salida]" Member="Marca_Salida" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Horas Asignadas]" Member="Horas_Asignadas" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Horas Normales]" Member="Horas_Normales" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="HorasExtras" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Total Horas]" Member="Total_Horas" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fichadora" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Ubicación" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

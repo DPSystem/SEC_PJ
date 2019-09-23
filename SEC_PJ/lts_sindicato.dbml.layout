@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 12.75" name="lts_sindicato">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.625, 14.5" name="lts_sindicato">
   <DataContextMoniker Name="/lts_sindicatoDataContext" />
   <nestedChildShapes>
     <classShape Id="45f2a3ad-18ca-4500-8962-f297def26d11" absoluteBounds="0.75, 0.75, 2, 6.3861311848958326">
@@ -36,6 +36,18 @@
       <DataClassMoniker Name="/lts_sindicatoDataContext/socemp" />
       <nestedChildShapes>
         <elementListCompartment Id="91f92c7f-6420-43ad-a94d-09a9ccfd635a" absoluteBounds="0.765, 10.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="35cc2e89-91b3-4b18-ba5d-c6b0bf6339a4" absoluteBounds="10.375, 4.75, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/lts_sindicatoDataContext/Capital" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d6feea4-b8ec-4d47-84c8-c7623a4c8ba4" absoluteBounds="10.39, 5.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d27922b-a34c-4b87-9f20-8dcad7230684" absoluteBounds="4.75, 10.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/lts_sindicatoDataContext/pettazi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4878a55c-377b-4086-b5f8-ba3cb020065d" absoluteBounds="4.765, 11.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

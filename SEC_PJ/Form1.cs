@@ -139,6 +139,8 @@ namespace SEC_PJ
                           join emp in db_sindicato.maeemp on socemp.SOCEMP_CUITE equals emp.MAEEMP_CUIT
                           join pj in db_sindicato.Padron_Capital on Convert.ToInt32(a.MAESOC_NRODOC) equals pj.numdoc into nopj // aqui hago el left join
                           from pj in nopj.DefaultIfEmpty()
+                          join cap in db_sindicato.Capital on Convert.ToInt32(a.MAESOC_NRODOC) equals cap.DOC into padron_electoral_capital // aqui hago el left join
+                          from cap in padron_electoral_capital.DefaultIfEmpty()
                           where
                           (a.MAESOC_APELLIDO.Contains(txt_buscar_afiliado.Text.Trim()) ||
                           a.MAESOC_NOMBRE.Contains(txt_buscar_afiliado.Text.Trim()) ||
@@ -151,11 +153,11 @@ namespace SEC_PJ
                               dni_socio = a.MAESOC_NRODOC,
                               apeynom = a.MAESOC_APELLIDO.Trim() + " " + a.MAESOC_NOMBRE.Trim(),
                               empresa = emp.MAEEMP_RAZSOC.Trim(),
-                              domicilio = a.MAESOC_CALLE,
+                              domicilio = cap.DOMICILIO.Trim(),//a.MAESOC_CALLE,
                               numero = a.MAESOC_NROCALLE,
                               apellido = a.MAESOC_APELLIDO.Trim(),
                               nombre = a.MAESOC_NOMBRE.Trim(),
-                              circuito = pj.circuito,
+                              circuito = cap.CIRCUITO,//pj.circuito,
                               afiliado_pj = (pj.numdoc == null || pj.numdoc == 0) ? "NO" : "SI",
                               profesion = pj.prof,
                               estado_civil = a.MAESOC_ESTCIV,
@@ -173,7 +175,7 @@ namespace SEC_PJ
 
         }
 
-        private void mostrar_datos_socios()
+        private void mostrar_datos_socios()//20959496   
         {
             txt_apellido.Text = dgv_mostrar_socios.CurrentRow.Cells["apellido"].Value.ToString();
             txt_nombre.Text = dgv_mostrar_socios.CurrentRow.Cells["nombre"].Value.ToString();
@@ -183,10 +185,11 @@ namespace SEC_PJ
             txt_sexo.Text = dgv_mostrar_socios.CurrentRow.Cells["sexo"].Value == null ? "": dgv_mostrar_socios.CurrentRow.Cells["sexo"].Value.ToString();
             txt_profesion.Text = dgv_mostrar_socios.CurrentRow.Cells["profesion"].Value == null ? "" : dgv_mostrar_socios.CurrentRow.Cells["profesion"].Value.ToString();
             txt_distrito.Text = dgv_mostrar_socios.CurrentRow.Cells["circuito"].Value == null ? "" : dgv_mostrar_socios.CurrentRow.Cells["circuito"].Value.ToString();
-            txt_calle_.Text = dgv_mostrar_socios.CurrentRow.Cells["domicilio"].Value.ToString();
+            txt_calle_.Text = dgv_mostrar_socios.CurrentRow.Cells["domicilio"].Value == null ? "" : dgv_mostrar_socios.CurrentRow.Cells["domicilio"].Value.ToString();
             txt_numero_.Text = dgv_mostrar_socios.CurrentRow.Cells["numero"].Value.ToString();
             if (dgv_mostrar_socios.CurrentRow.Cells["afiliado_pj"].Value.ToString() == "SI")
             {
+
                 btn_imprimir.Enabled = false;
             }
             else
@@ -274,7 +277,10 @@ namespace SEC_PJ
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            var horas = (from a in db_sindicato.pettazi select a).Sum(x => x.HorasExtras.Value.Hour);
+            var minutos = (from a in db_sindicato.pettazi select a).Sum(x => x.HorasExtras.Value.Minute);
 
+            label1.Text = horas.ToString() + " -- " + minutos.ToString();
         }
     }
 }
