@@ -170,7 +170,9 @@ namespace SEC_PJ
       dgv_mostrar_socios.DataSource = socios.ToList();
 
       lbl_cantidad_registros.Text = socios.Count().ToString();
+
       lbl_cantidad_afiliados.Text = socios.Count(x => x.circuito != null).ToString();
+
       lbl_cantidad_NO_afil.Text = socios.Count(x => x.circuito == null).ToString();
 
     }
