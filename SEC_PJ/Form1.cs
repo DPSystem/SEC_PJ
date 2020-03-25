@@ -134,6 +134,7 @@ namespace SEC_PJ
     }
     private void buscar_socios()
     {
+
       var socios = (from a in db_sindicato.maesoc
                     join socemp in db_sindicato.socemp on a.MAESOC_CUIL equals socemp.SOCEMP_CUIL
                     join emp in db_sindicato.maeemp on socemp.SOCEMP_CUITE equals emp.MAEEMP_CUIT
